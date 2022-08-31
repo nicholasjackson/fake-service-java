@@ -7,10 +7,15 @@ plugins {
 
 group = 'io.nicholasjackson'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
+}
+
+configurations {
+    all*.exclude module : 'spring-boot-starter-logging'
+    all*.exclude module : 'logback-classic'
 }
 
 dependencies {
